@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 import { Route, Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 class App extends React.Component {
 
@@ -53,6 +54,6 @@ const mapDispatchToProps = dispatch =>({
 });
 
 const mapStateToProps = state =>({
-  currentUser: state.user.currentUser
+  currentUser: selectCurrentUser(state)
 });
 export default connect(mapStateToProps,mapDispatchToProps)(App);
