@@ -33,6 +33,9 @@
     "workbox-strategies": "^5.1.4",
     "workbox-streams": "^5.1.4"
   },
+  "engines":{
+    "node": "^17.5.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
