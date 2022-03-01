@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import { selectCartItems, selectCartTotal } from "../../redux/cart/cart.selectors";
+import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
 import './checkout.styles.scss'
 
 const CheckoutPage =({cartItems, total})=>(
@@ -29,6 +30,7 @@ const CheckoutPage =({cartItems, total})=>(
         <div className="total">
             <span>{total}</span>
         </div>
+        <StripeCheckoutButton price={total}></StripeCheckoutButton>
     </div>
 );
 
